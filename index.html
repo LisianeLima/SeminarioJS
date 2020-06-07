@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title> Formulario </title>
+        <link rel="stylesheet" href="estilo.css">
     </head>
-    <h2> Insira os seus dados </h2>
+
+    
     <body>
-        <form>
+        <section class="conteiner">
+            <a class="links" id="paracadastrar"></a>
+
+        <div class="content">
+            <div id="cadastrar">
+        <form method="POST" action="" >
+            <h1 class="titulo"> Preenche o formulario </h1>
+
+            <div>
             <label for="fname"> Name: </label>
-            <input type="text" id="fname" name="fname"> </input><br><br>
+            <input type="text" id="fname" name="fname"> </input>
+            </div>
 
-            <label for="flastname"> LastName: </label>
-            <input type="text" id="flastname" name="flastname"> </input><br><br>
+            <div>
+                <label for="flastname"> LastName: </label>
+                <input type="text" id="flastname" name="flastname"> </input>
+            </div>
 
-            <label for="femail"> Email: </label>
-            <input type="email" id="femail" name="femail"> </input><br><br>
+            <div>
+                <label for="femail"> Email: </label>
+                <input type="email" id="femail" name="femail"> </input>
+            </div>
 
-            <label for="fpassword"> Password: </label>
-            <input type="password" id="fpassword" name="fpassword"> </input><br><br>
+            <div>
+                <label for="fpassword"> Password: </label>
+                <input type="password" id="fpassword" name="fpassword"> </input>
+            </div>
+            
+            <div class="radio">
+                <label class="sexo" for="sexo" style="margin-top: 20px;"> Sexo: </label>
+                <input type="radio" id="rmasc" name="sexo" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="rfem" name="sexo" value="feminino">
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="rout" name="sexo" value="outro">
+                <label for="outro">Outro</label>
+            </div>
 
-            <label for="sexo"> Sexo: </label>
-            <input type="radio" id="rmasc" name="sexo" value="masculino">
-            <label for="masculino">Male</label>
-            <input type="radio" id="rfem" name="sexo" value="feminino">
-            <label for="feminino">Feminino</label>
-            <input type="radio" id="rout" name="sexo" value="outro">
-            <label for="outro">Outro</label><br><br>
-
-            <label for="fname"> Ilha: </label>
+            <p>
+                <label for="fname"> Ilha: </label>
             <input list="fIlha" name="ilha"> 
                 <datalist id="fIlha">
                     <option value="Santao Antao">
@@ -38,14 +62,19 @@
                     <option value="Fogo">
                     <option value="Brava">
                     </option>
-                </datalist></input><br> <br>
-
-                <input type="submit" value="Enviar">
-                <input type="submit" value="Cancelar">
+                </datalist></input> 
+            </p>
             
+            <div>
+                <button class="submit" type="submit">Enviar </button>
+                <button> Cancelar </button>
+            </div>
 
         </form>
 
+            </div>
+        </div>
+        </section>
     </body>
   
 </html>
