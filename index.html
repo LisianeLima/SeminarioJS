@@ -5,6 +5,7 @@
         <meta name="viewport" content="">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title> Formulario </title>
+     
         <link rel="stylesheet" href="estilo.css">
     </head>
 
@@ -15,26 +16,30 @@
 
         <div class="content">
             <div id="cadastrar">
-        <form method="POST" action="" >
+        <form   name="myform" onsubmit="return validateForm()">
             <h1 class="titulo"> Preenche o formulario </h1>
 
             <div>
             <label for="fname"> Name: </label>
-            <input type="text" id="fname" name="fname"> </input>
+            <small id="nameError" style="color: red;display: none;">Name must be filled</small>
+            <input type="text" id="fname" name="fname"/>
             </div>
 
             <div>
                 <label for="flastname"> LastName: </label>
+                <small id="lastNameError" style="color: red;display: none;">Last Name must be filled</small>
                 <input type="text" id="flastname" name="flastname"> </input>
             </div>
 
             <div>
                 <label for="femail"> Email: </label>
+                <small id="emailError" style="color: red;display: none;">Email must be filled</small>
                 <input type="email" id="femail" name="femail"> </input>
             </div>
 
             <div>
                 <label for="fpassword"> Password: </label>
+                <small id="passwordError" style="color: red;display: none;">Password must be filled</small>
                 <input type="password" id="fpassword" name="fpassword"> </input>
             </div>
             
@@ -48,33 +53,34 @@
                 <label for="outro">Outro</label>
             </div>
 
-            <p>
-                <label for="fname"> Ilha: </label>
-            <input list="fIlha" name="ilha"> 
-                <datalist id="fIlha">
-                    <option value="Santao Antao">
-                    <option value="Sao Vicente">
-                    <option value="Sao Nicolau">
-                    <option value="Sal">
-                    <option value="Boa Vista">
-                    <option value="Maio">
-                    <option value="Santiago">
-                    <option value="Fogo">
-                    <option value="Brava">
-                    </option>
-                </datalist></input> 
-            </p>
+            <div>
+                <label for="filha"> Ilha: </label>
+                <select>
+                    <option>Santao Antao</option>
+                    <option>Sao Vicente</option>
+                    <option>Sao Nicolau</option>
+                    <option>Sal</option>
+                    <option>Boa Vista</option>
+                    <option>Maio</option>
+                    <option>Santiago</option>
+                    <option>Fogo</option>
+                    <option>Brava</option>
+                </select> 
+            </div>
             
             <div>
-                <button class="submit" type="submit">Enviar </button>
-                <button> Cancelar </button>
+                <button class="submit" type="button" onclick="validateForm()">Send</button>
+                <button>Cancel</button>
             </div>
 
+        
         </form>
 
             </div>
         </div>
         </section>
+
+        <script src="script.js"></script>
     </body>
   
 </html>
